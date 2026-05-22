@@ -10,6 +10,7 @@
 
     <header>
   <nav>
+    <a href="#" class="logo">Skate</a>   <!-- NUEVO: nombre de tu producto -->
     <a href="#">Inicio</a>
     <a href="#">Producto</a>
     <a href="#">Contacto</a>
@@ -22,28 +23,44 @@
     <p>El skateboarding es mucho más que un deporte; encarna la perseverancia, la libertad y la autoexpresión.</p>
       <img src="img/hero.jpg" alt="skate negro con diseño blanco">  
 </section>
-  <section>
-    <h2>Características</h2>
-    <ul>
-      <li>Ideal para hacer trucos y skatepark.</li>
-      <li>Tabla más pequeña y ligera.</li>
-      <li>Tiene ruedas pequeñas para mayor control.</li>
-    </ul>
-  </section>
 
-  <section>
+<section id="caracteristicas">
+  <h2>Características</h2>
+  <div class="cards">
+    <article class="card">
+      <img src="img/icono-1.svg" alt="" width="48" height="48">
+      <h3>Skateboard</h3>
+      <p>Ideal para trucos y estilo urbano en la ciudad.</p>
+    </article>
+    <article class="card">
+      <img src="img/icono-2.svg" alt="" width="48" height="48">
+      <h3>Cruiser</h3>
+      <p>Perfecto para desplazarte cómodo y rápido.</p>
+    </article>
+    <article class="card">
+      <img src="img/icono-3.svg" alt="" width="48" height="48">
+      <h3>Longboard</h3>
+      <p>Diseñado para velocidad y trayectos largos.</p>
+    </article>
+  </div>
+</section>
+
+<section id="PreguntasF">
   <h2>Preguntas Frecuentes</h2>
 
-  <details>
-    <summary>¿Cuál es la diferencia entre un skate y un cruiser?</summary>
-    <p>El skate es ideal para trucos y parques, mientras que el cruiser está diseñado para paseos más cómodos en la ciudad.</p>
-  </details>
+  <div class="faq-cards">
 
-  <details>
-    <summary>¿Qué tipo de skate es mejor para principiantes?</summary>
-    <p>El cruiser o el longboard son mejores para principiantes porque son más estables y fáciles de manejar.</p>
-  </details>
+    <article class="faq-card">
+      <h3>¿Cuál es la diferencia entre un skate y un cruiser?</h3>
+      <p>El skate es ideal para trucos y parques, mientras que el cruiser está diseñado para paseos más cómodos en la ciudad.</p>
+    </article>
 
+    <article class="faq-card">
+      <h3>¿Qué tipo de skate es mejor para principiantes?</h3>
+      <p>El cruiser o el longboard son mejores para principiantes porque son más estables y fáciles de manejar.</p>
+    </article>
+
+  </div>
 </section>
 
 <section id="contacto">
@@ -70,9 +87,48 @@
   </form>
 </section>
 
+<div class="galeria">
+
+  <figure class="galeria-item">
+    <img src="img/g1.jpg" alt="skateboarding negro con diseño blanco">
+    <figcaption>Perfecto para freestyle</figcaption>
+  </figure>
+
+  <figure class="galeria-item">
+    <img src="img/g2.jpg" alt="Skate Cruiser con diseño de fuego">
+    <figcaption>Diseño moderno y resistente</figcaption>
+  </figure>
+
+  <figure class="galeria-item">
+    <img src="img/g3.jpg" alt="Skate longboard con diseño blanco">
+    <figcaption>Skate en acción en la ciudad</figcaption>
+  </figure>
+
+</div>
+
+<section id="testimonios">
+  <h2>Testimonios</h2>
+
+  <div class="testimonios">
+
+    <article class="testimonio">
+      <p>"El mejor skate que he probado, súper resistente."</p>
+      <h4>- Carlos</h4>
+    </article>
+
+    <article class="testimonio">
+      <p>"Perfecto para moverme por la ciudad todos los días."</p>
+      <h4>- María</h4>
+    </article>
+
+  </div>
+</section>
+
 </main>
-<footer>
+<footer id="footer">
+
   <p>Contacto: skateB0arding@miempresa.com</p>
+  <div class="social">
   <a href="#" aria-label="Síguenos en Facebook">
     <img src="img/facebook.svg" alt="" width="32" height="32">
   </a>
@@ -88,7 +144,19 @@
   <a href="#" aria-label="Síguenos en Tiktok">
     <img src="img/tiktok.svg" alt="" width="32" height="32">
   </a>
+  </div>
+
+  <div class="footer-main">
+    <p>© 2026 Mi Sitio Web</p>
+  </div>
+
+  <div class="footer-links">
+    <a href="#">Términos y Condiciones</a>
+    <a href="#">Política de Privacidad</a>
+  </div>
+  
 </footer>
+
 
 <script>
   const btn = document.getElementById("toggleTheme");
