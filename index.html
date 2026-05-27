@@ -9,20 +9,28 @@
 <body>
 
     <header>
-  <nav>
-    <a href="#" class="logo">Skate</a>   <!-- NUEVO: nombre de tu producto -->
-    <a href="#">Inicio</a>
-    <a href="#">Producto</a>
-    <a href="#">Contacto</a>
-  </nav>
-  <button id="toggleTheme">Cambiar modo</button>
+<nav>
+  <a href="index.html" class="logo">Skate</a>
+  <a href="index.html">Inicio</a>
+  <a href="precios.html">Precios</a>
+  <a href="#">Contacto</a>
+  <a href="faq.html" id="icono-faq" aria-label="Preguntas frecuentes">
+    <img src="img/faq.svg" alt="" width="24" height="24">
+  </a>
+</nav>
+<button id="toggleTheme">🌙</button>
 </header>
 <main>
   <section id="hero">
+  <div class="hero-texto">
     <h1>Skate</h1>
-    <p>El skateboarding es mucho más que un deporte; encarna la perseverancia, la libertad y la autoexpresión.</p>
-      <img src="img/hero.jpg" alt="skate negro con diseño blanco">  
-</section>
+    <p>
+      El skateboarding es mucho más que un deporte; encarna la perseverancia, la libertad y la autoexpresión.
+    </p>
+  </div>
+  <img src="img/hero.jpg" alt="skate negro con diseño blanco">  
+
+  </section>
 
 <section id="caracteristicas">
   <h2>Características</h2>
@@ -95,12 +103,12 @@
   </figure>
 
   <figure class="galeria-item">
-    <img src="img/g2.jpg" alt="Skate Cruiser con diseño de fuego">
+    <img src="img/g2.jpg" alt="Skate Cruiser con diseño de rojo">
     <figcaption>Diseño moderno y resistente</figcaption>
   </figure>
 
   <figure class="galeria-item">
-    <img src="img/g3.jpg" alt="Skate longboard con diseño blanco">
+    <img src="img/g3.jpg" alt="Skate longboard con diseño azul">
     <figcaption>Skate en acción en la ciudad</figcaption>
   </figure>
 
@@ -163,6 +171,13 @@
 
   btn.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
+
+    // Cambiar icono
+    if (document.body.classList.contains("dark-mode")) {
+      btn.textContent = "☀️";
+    } else {
+      btn.textContent = "🌙";
+    }
   });
 </script>
 
