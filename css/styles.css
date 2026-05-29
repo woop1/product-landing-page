@@ -11,6 +11,32 @@
   --card-bg: #ffffff;
   --border-color: #e0e0e0;
   --soft-bg: #f5f5f5;
+
+  /* Colores */
+  --color-primary: #1a1a1a;       /* botones, nav, borders sólidos */
+  --color-accent: #0066cc;        /* color de marca para destacar (links hover, badge) */
+  --color-text: #1a1a1a;          /* texto base */
+  --color-bg: #ffffff;            /* fondo del body */
+  --color-bg-soft: #f5f5f5;       /* footer, faq-nav, .logos */
+  --color-border: #e0e0e0;        /* cards, plans, details, inputs */
+
+  /* Tipografía */
+  --font-text: system-ui, -apple-system, sans-serif;
+  --font-size: 16px;
+  --font-size-title: 28px;
+
+  /* Espacios */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+
+  /* Estética */
+  --radius: 8px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+
+
+
 }
 
 /* MODO OSCURO */
@@ -31,6 +57,9 @@ body {
   font-family: system-ui, sans-serif;
   line-height: 1.5;
   /* color: #1a1a1a; */
+    /* ...tus propiedades anteriores... */
+  font-family: var(--font-text);
+  
 }
 
 /* BOTON */
@@ -115,9 +144,14 @@ header nav {
 
 /* HEADER COLOR*/
 nav a {
+  
   text-decoration: none;
   /* color: #1a1a1a; */
   font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--color-accent);
 }
 
 /* Flex basico en el hero */
@@ -192,18 +226,24 @@ footer a {
 
 #contacto input {
   padding: 0.5rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
   font: inherit;
+}
+
+#contacto textarea {
+  /* ...tus propiedades anteriores... */
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
 }
 
 #contacto button {
   gap: 1rem;
   padding: 0.75rem;
-  background: #1a1a1a;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-bg);
   border: none;
-  border-radius: 4px;
+  border-radius: var(--radius);
   font-weight: 600;
   cursor: pointer;
   
@@ -217,6 +257,7 @@ footer a {
   align-items: center;
   gap: 1rem;
   padding: 2rem;
+  background: var(--soft-bg);
 }
 
 /* FILA PRINCIPAL */
@@ -257,8 +298,8 @@ header nav .logo {
   flex-basis: 280px;
   flex-grow: 1;
   padding: 1rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
 /*   background: #fff; */
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* RETO AUTONOMO 2*/
 }
@@ -430,16 +471,26 @@ header nav .logo {
 }
 
 .plan {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+
+  /* ...tus propiedades anteriores... */
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s, transform 0.2s;
+  
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
   padding: 24px;
-  /*background: #fff;*/
+  background: var(--color-bg);
   height: 300px;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.plan:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
 }
 
 .plan .precio {
@@ -487,7 +538,7 @@ header nav .logo {
   padding: 24px;
   text-align: center;
   font-weight: 700;
-  border-radius: 8px;
+  border-radius: var(--radius);
 }
 
 .plan{
